@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-adsense-account" content="ca-pub-3630176199534356">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to IZUKU MD WHATSAPP BOT</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f3f8; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+            max-width: 80%; 
+        }
+
+        .text {
+            font-size: 24px; 
+            font-weight: bold;
+            color: #62b1d0;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; 
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #62b1d0;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            padding: 10px 16px; 
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px; 
+            display: inline-block;
+            width: auto; 
+            height: 40px; 
+            text-align: center;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #7db1d0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text" id="typingText"></div>
+        <div class="buttons">
+            <button onclick="window.open('https://izuku-connect-41eec915ec35.herokuapp.com')" class="button">Pair Code</button>
+            <button onclick="window.open('https://github.com/excelottah6/IZUKU-MD')" class="button">GitHub</button>
+            <button onclick="window.open('https://www.heroku.com/deploy?template=https://github.com/excelottah6/IZUKU-MD')" class="button">Deploy</button>
+            <button onclick="openQrPage()" class="button">QR</button>
+            <button onclick="window.open('https://chat.whatsapp.com/HxVuy25MtqoFOsYuyxBx0G')" class="button">WhatsApp</button>
+        </div>
+    </div>
+
+    <script>
+       
+        const textElement = document.getElementById('typingText');
+        const textToType = 'Welcome to IZUKU MD QR WEB ';
+        let index = 0;
+
+        function typeText() {
+            if (index < textToType.length) {
+                textElement.innerHTML += textToType.charAt(index);
+                index++;
+                setTimeout(typeText, 100);
+            }
+        }
+        typeText();
+        
+        function openQrPage() {
+            window.open('./qr.html', '_blank');
+        }
+
+        function openPairPage() {
+            window.open('./pair.html', '_blank');
+        }
+    </script>
+<script type="text/javascript">
+    var infolinks_pid = 3413704;
+    var infolinks_wsid = 0;
+</script>
+<script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
+</body>
+</html>
